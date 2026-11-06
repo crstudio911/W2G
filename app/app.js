@@ -56,7 +56,7 @@
     var p = pos[x.id] || { s: 1, e: 1 };
     openSheet('<button class="x" data-close>✕</button><div class="det"><div class="det-p">' + (x.p ? '<img alt="" src="' + esc(big(x.p)) + '">' : "") + '</div><div class="det-b"><h2>' + esc(title(x)) + "</h2><p class=muted>" + esc([x.en && x.en !== x.ar ? x.en : "", x.y, x.type === "t" ? "مسلسل" : "فيلم"].filter(Boolean).join(" · ")) + "</p>" + (x.cast ? "<p>" + esc(x.cast) + "</p>" : "") +
       (x.type === "t" ? '<div class="ep"><label>الموسم<input id="dS" type="number" min="1" value="' + p.s + '"></label><label>الحلقة<input id="dE" type="number" min="1" value="' + p.e + '"></label></div>' : "") +
-      '<div class="hero-act"><button class="btn btn-primary" data-play="' + esc(x.id) + '"><i class="ico ico-play"></i>شغّل</button><button class="btn btn-ghost" data-fav="' + esc(x.id) + '"><i class="ico ico-heart"></i>' + (list[x.id] ? "في قايمتك" : "أضف لقايمتي") + "</button></div></div></div>");
+      '<button class="fab" data-play="' + esc(x.id) + '"><i class="ico ico-play"></i>شغّل</button><div class="hero-act"><button class="btn btn-ghost" data-fav="' + esc(x.id) + '"><i class="ico ico-heart"></i>' + (list[x.id] ? "في قايمتك" : "أضف لقايمتي") + "</button></div></div></div>");
   }
   function play(x) {
     if (x.type === "t" && $("dS")) { pos[x.id] = { s: Math.max(1, +$("dS").value || 1), e: Math.max(1, +$("dE").value || 1) }; S.write("w2g_pos", pos); }
