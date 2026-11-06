@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الدخول - W2G</title>
+<link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32"><link rel="icon" href="../img/favicon.ico"><link rel="apple-touch-icon" href="../img/favicon-180.png">
+<link rel="stylesheet" href="../one.css">
+<link rel="stylesheet" href="login.css">
+<script src="../one.js"></script>
+</head>
+<body>
+<button class="theme-btn auth-theme" type="button"></button>
+<div class="auth-page">
+<section class="auth-side">
+<div class="brand"><img src="../img/logo.png" alt="W2G"><div><div class="brand-name">W<span>2</span>G</div><small>WE WATCH TOGETHER</small></div></div>
+<h1>شاهد مع أصحابك<br><span>في نفس اللحظة</span></h1>
+<p>More Than Streaming... A Shared Experience. قنوات مباشرة، وقريب أفلام ومسلسلات.</p>
+<div class="side-glow"></div>
+</section>
+<section class="auth-card">
+<div class="tabs">
+<button class="tab active" data-tab="login">دخول</button>
+<button class="tab" data-tab="register">حساب جديد</button>
+</div>
+<form id="loginForm" class="form">
+<label>البريد الإلكتروني<input type="email" name="email" required autocomplete="email"></label>
+<label>كلمة السر<input type="password" name="pass" required minlength="4" autocomplete="current-password"></label>
+<button class="btn btn-primary" type="submit">دخول</button>
+</form>
+<form id="registerForm" class="form hidden">
+<label>الاسم<input type="text" name="name" required maxlength="40"></label>
+<label>البريد الإلكتروني<input type="email" name="email" required autocomplete="email"></label>
+<label>كلمة السر<input type="password" name="pass" required minlength="4" autocomplete="new-password"></label>
+<button class="btn btn-primary" type="submit">إنشاء الحساب</button>
+</form>
+<div class="divider"><span>أو</span></div>
+<button id="guestBtn" class="btn btn-ghost full">الدخول كضيف</button>
+<p class="note">تسجيل الدخول مؤقت ومحلي على جهازك فقط.</p>
+<p id="err" class="err"></p>
+</section>
+</div>
+<script src="login.js"></script>
+</body>
+</html>

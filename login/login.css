@@ -1,0 +1,22 @@
+.auth-page{min-height:100vh;display:grid;grid-template-columns:1.1fr 1fr}
+.auth-side{position:relative;overflow:hidden;padding:48px;display:flex;flex-direction:column;justify-content:center;gap:22px;background:radial-gradient(circle at 80% 20%,rgba(139,92,246,.28),transparent 55%),var(--bg2);border-left:1px solid var(--line)}
+.auth-side .brand{position:absolute;top:36px;right:48px}.auth-theme{position:fixed;top:24px;left:24px;z-index:5}
+.auth-side h1{font-size:clamp(2rem,4vw,3.4rem);line-height:1.25;font-weight:700}
+.auth-side h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.auth-side p{color:var(--muted);max-width:420px;line-height:1.8}
+.side-glow{position:absolute;width:420px;height:420px;border-radius:50%;background:var(--grad);filter:blur(140px);opacity:.18;bottom:-160px;left:-120px}
+.auth-card{display:flex;flex-direction:column;justify-content:center;gap:18px;padding:48px;max-width:460px;width:100%;margin:auto}
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:5px}
+.tab{padding:10px;border-radius:10px;color:var(--muted);font-weight:500}
+.tab.active{background:var(--bg);color:var(--text)}
+.form{display:flex;flex-direction:column;gap:14px}
+.form.hidden{display:none}
+.form label{display:flex;flex-direction:column;gap:6px;font-size:.85rem;color:var(--muted)}
+.form input{padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:.95rem;outline:none;transition:.2s}
+.form input:focus{border-color:var(--accent)}
+.divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.8rem}
+.divider:before,.divider:after{content:"";flex:1;height:1px;background:var(--line)}
+.full{width:100%}
+.note{font-size:.75rem;color:var(--muted);text-align:center}
+.err{color:var(--danger);text-align:center;min-height:1.2em;font-size:.85rem}
+@media (max-width:860px){.auth-page{grid-template-columns:1fr}.auth-side{padding:96px 28px 36px;min-height:auto}.auth-side .brand{right:28px;top:28px}.auth-card{padding:28px}}

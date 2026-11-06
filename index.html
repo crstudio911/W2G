@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W2G - We Watch Together</title>
+<meta name="description" content="W2G مكان تتفرجوا فيه على الأفلام والمسلسلات سوا، بمشغل نظيف من غير إعلانات.">
+<link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32"><link rel="icon" href="img/favicon.ico"><link rel="apple-touch-icon" href="img/favicon-180.png">
+<link rel="stylesheet" href="one.css">
+<link rel="stylesheet" href="app/app.css">
+<script src="one.js"></script>
+</head>
+<body class="landing">
+<header class="topbar">
+<a class="brand" href="index.html"><img src="img/logo.png" alt="W2G"><div><div class="brand-name">W<span>2</span>G</div><small>We Watch Together</small></div></a>
+<div class="top-act"><button class="theme-btn"></button><a class="btn btn-primary" href="app/app.html">ادخل</a></div>
+</header>
+<main>
+<section class="l-hero">
+<div class="l-glow"></div>
+<h1>اتفرجوا <span class="grad-t">سوا</span>،<br>حتى لو كل واحد في مكان.</h1>
+<p>W2G مكان خاص ليك ولصحابك للأفلام والمسلسلات. مشغل نظيف، من غير إعلانات، ومن غير نوافذ بتفتح لوحدها.</p>
+<div class="l-cta"><a class="btn btn-primary lg" href="app/app.html"><i class="ico ico-play"></i>ابدأ المشاهدة</a><a class="btn btn-ghost lg" href="#why">اعرف أكتر</a></div>
+<div class="l-posters" id="lp"></div>
+</section>
+<section class="l-feats" id="why">
+<div class="feat"><i class="ico ico-play"></i><h3>مشغل نظيف</h3><p>الفيديو بيشتغل من سيرفرنا الخاص، مفيش إعلانات ولا تحويل لمواقع تانية.</p></div>
+<div class="feat"><i class="ico ico-search"></i><h3>دوّر على أي حاجة</h3><p>اكتب اسم أي فيلم أو مسلسل وهيظهر بالبوستر بتاعه.</p></div>
+<div class="feat"><i class="ico ico-heart"></i><h3>قايمتك</h3><p>احفظ اللي عايز تشوفه، وكمّل من آخر حلقة وقفت عندها.</p></div>
+<div class="feat"><i class="ico ico-users"></i><h3>غرف مشاهدة</h3><p>قريب: اعمل غرفة وادعي صحابك تتفرجوا في نفس اللحظة.</p></div>
+</section>
+<section class="l-end"><h2>جاهز؟</h2><a class="btn btn-primary lg" href="app/app.html">ادخل W2G</a></section>
+</main>
+<footer class="foot">W2G · We Watch Together</footer>
+<script src="core/catalog.js"></script>
+<script>
+(function(){var l=(window.W2G_CATALOG||{movies:[]}).movies.filter(function(x){return x.p}).slice(0,12);
+document.getElementById("lp").innerHTML=l.map(function(x,i){return '<img loading="lazy" alt="" style="--i:'+i+'" src="'+x.p.replace(/"/g,"")+'">'}).join("");})();
+</script>
+</body>
+</html>

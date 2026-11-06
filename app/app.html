@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W2G - أفلام ومسلسلات</title>
+<link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32"><link rel="icon" href="../img/favicon.ico"><link rel="apple-touch-icon" href="../img/favicon-180.png">
+<link rel="stylesheet" href="../one.css">
+<link rel="stylesheet" href="app.css">
+<script src="../config.js"></script>
+<script src="../one.js"></script>
+</head>
+<body>
+<header class="topbar app-top">
+<a class="brand" href="../index.html"><img src="../img/logo.png" alt="W2G"><div><div class="brand-name">W<span>2</span>G</div></div></a>
+<nav class="tabs" id="tabs">
+<button data-tab="home" class="active">الرئيسية</button>
+<button data-tab="movies">أفلام</button>
+<button data-tab="series">مسلسلات</button>
+<button data-tab="list">قايمتي</button>
+</nav>
+<div class="top-act">
+<label class="search"><i class="ico ico-search"></i><input id="q" placeholder="دوّر على فيلم أو مسلسل" autocomplete="off"></label>
+<button class="theme-btn"></button>
+</div>
+</header>
+<main id="view"></main>
+<nav class="bottom-tabs" id="btabs">
+<button data-tab="home" class="active"><i class="ico ico-home"></i>الرئيسية</button>
+<button data-tab="movies"><i class="ico ico-play"></i>أفلام</button>
+<button data-tab="series"><i class="ico ico-room"></i>مسلسلات</button>
+<button data-tab="list"><i class="ico ico-heart"></i>قايمتي</button>
+</nav>
+<div class="modal" id="modal" hidden><div class="modal-bg" data-close></div><div class="sheet" id="sheet"></div></div>
+<script src="../core/catalog.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
