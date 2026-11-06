@@ -13,26 +13,25 @@
 <body>
 <header class="topbar app-top">
 <a class="brand" href="../index.html"><img src="../img/logo.png" alt="W2G"><div><div class="brand-name">W<span>2</span>G</div></div></a>
-<nav class="tabs" id="tabs">
-<button data-tab="home" class="active">الرئيسية</button>
-<button data-tab="movies">أفلام</button>
-<button data-tab="series">مسلسلات</button>
-<button data-tab="list">قايمتي</button>
-</nav>
-<div class="top-act">
-<label class="search"><i class="ico ico-search"></i><input id="q" placeholder="دوّر على فيلم أو مسلسل" autocomplete="off"></label>
-<button class="theme-btn"></button>
-</div>
+<nav class="tabs" id="sites"><button data-site="tmdb">TMDB</button><button data-site="lb">Letterboxd</button></nav>
+<div class="top-act"><button class="theme-btn"></button></div>
 </header>
-<main id="view"></main>
-<nav class="bottom-tabs" id="btabs">
-<button data-tab="home" class="active"><i class="ico ico-home"></i>الرئيسية</button>
-<button data-tab="movies"><i class="ico ico-play"></i>أفلام</button>
-<button data-tab="series"><i class="ico ico-room"></i>مسلسلات</button>
-<button data-tab="list"><i class="ico ico-heart"></i>قايمتي</button>
-</nav>
+<main id="view">
+<section class="pick" id="pick">
+<h1>اختار الموقع اللي هتدوّر فيه</h1>
+<p>دوّر على الفيلم أو المسلسل، افتح صفحته، وهيظهرلك زرار «شغّل».</p>
+<div class="pick-grid">
+<button class="pick-card" data-site="tmdb"><strong>TMDB</strong><span>أكبر قاعدة أفلام ومسلسلات</span></button>
+<button class="pick-card" data-site="lb"><strong>Letterboxd</strong><span>أفلام وتقييمات</span></button>
+</div>
+</section>
+<div class="browser" id="browser" hidden><iframe id="site" title="موقع الأفلام" referrerpolicy="no-referrer"></iframe></div>
+</main>
+<div class="fab-wrap" id="fab" hidden>
+<div class="fab-ep" id="ep" hidden><label>الموسم<input id="dS" type="number" min="1" value="1"></label><label>الحلقة<input id="dE" type="number" min="1" value="1"></label></div>
+<button class="fab" id="playBtn"><i class="ico ico-play"></i><span>شغّل</span></button>
+</div>
 <div class="modal" id="modal" hidden><div class="modal-bg" data-close></div><div class="sheet" id="sheet"></div></div>
-<script src="../core/catalog.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
